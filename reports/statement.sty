@@ -1,0 +1,109 @@
+%
+% Style file for statements
+%
+% \BaseDir{dir containing ball and box}
+% \StatementDate{date}
+% \begin{STATEMENT}
+%   \To{address}
+%   \Orderno{order number}
+%   \OrderDate{date}
+%   \OrderDetails
+%   ...
+% \end{STATEMENT}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{color}
+
+\setlength{\voffset}{-1in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0pt}
+\setlength{\textwidth}{7in}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\textheight}{10in}
+\setlength{\footskip}{0pt}
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\BaseDir}[1]{\gdef\BASEDIR{#1}}
+\newcommand{\To}[1]{\gdef\TO{#1}}
+\newcommand{\ShipTo}[1]{\gdef\SHIPTO{#1}}
+\newcommand{\OrderNo}[1]{\gdef\ORDERNO{#1}}
+\newcommand{\StatementDate}[1]{\gdef\STATEMENTDATE{#1}}
+\newcommand{\OrderDate}[1]{\gdef\ORDERDATE{#1}}
+\newcommand{\Comment}[1]{\gdef\COMMENT{#1}}
+
+\gdef\DOCNAME{STATEMENT}
+\gdef\TERMS{\\Terms: \makebox[.95in]{\mbox{}\hfill 30 days}}
+\gdef\FOOTNOTE{Make all checks payable (in U.S. funds) to: Destination
+Imagination, Inc.\\
+   Return copy of statement with payment.\\}
+
+\newcommand{\IsPackingList}{%
+  \gdef\DOCNAME{PACKING LIST}%
+  \gdef\TERMS{}%
+  \gdef\FOOTNOTE{}%
+}
+
+
+\newcommand{\note}[1]{%
+  \textbf{\color[rgb]{0.0,0.0,1.0}#1}}
+
+
+\newenvironment{STATEMENT}{%
+  \gdef\COMMENT{}%
+}{%
+  \vbox to 1in {%
+    Notes: \parbox[t]{3in}{\COMMENT}
+  }
+
+  {\small \FOOTNOTE
+   If you have any questions concerning this
+   statement, call (856) 881--1603\vspace{.3in}\par}
+
+  {\centering\textbf{\textsc{Thank You!}}\par}
+}
+
+\newcommand{\OrderDetails}{%
+  \newpage\sffamily
+  \parbox[t]{1in}{\vskip .1in\includegraphics*{\BASEDIR /ballandbox.jpg}\vskip -.1in}%
+  \parbox[t]{3in}{%
+    {\Large Destination ImagiNation, Inc.}\\
+    \textbf{\textsl{\small The most important course in education.}}\\
+    P.O. Box 547\\
+    Glassboro, NJ 08028-0547\\
+    Ph. (856) 881--1603  Fax (856) 881--3596\\
+    {\small http://www.destinationimagination.org}\\[2ex]
+    FED TAX ID \#  22-2415554}%
+  \hfill
+  \parbox[t]{2.5in}{\raggedleft
+       {\Huge \DOCNAME}\\[3ex]
+       Date:\makebox[.95in]{\mbox{}\hfill \STATEMENTDATE}\\
+       Order Number:\makebox[.95in]{\mbox{}\hfill \ORDERNO}\\
+       Order Date:\makebox[.95in]{\mbox{}\hfill \ORDERDATE}%
+       \TERMS \\}
+  
+
+  \vspace{.3in}\par
+
+  \textbf{To:}\quad\parbox[t]{3in}{\TO}\hfil
+  \textbf{Ship:}\quad\parbox[t]{3in}{\SHIPTO}
+
+  \vspace{.5in}\par
+
+  \newbox\dl
+  \setbox\dl=\hbox to 1pt{\rule[4pt]{1pt}{3pt}\\
+                          \rule[0pt]{1pt}{.5pt}}%
+
+  \mbox{}\leaders\copy\dl\hfill\mbox{}
+
+  \vskip .3in
+
+  \setlength{\tabcolsep}{5 pt}%
+  \renewcommand{\arraystretch}{1.3}%
+}
+
+% LocalWords:  ImagiNation TXCPSO MyFigure ballandbox Glassboro ImaginNation
+% LocalWords:  assport nvoice ugust Shumard dddddd DIINV erms

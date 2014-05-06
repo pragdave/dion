@@ -1,0 +1,441 @@
+a:hover { 
+	color: #000000; 
+	background-color: #f0d0d0; 
+}
+
+a:visited {
+ 	color: #800000;
+}
+
+a:link {
+    	color: #404040;
+}
+
+table {
+    font-size: 100%;
+    font-family: verdana, arial, helvetica, Sans-Serif;
+}
+
+h1 {
+    font-family: verdana, arial, helvetica, Sans-Serif;
+    text-align: left;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+h1 a:link {
+    font-family: verdana, arial, helvetica, Sans-Serif;
+    text-decoration: none;
+    color: #802000;
+}
+h1 a:visited {
+    font-family: verdana, arial, helvetica, Sans-Serif;
+    text-decoration: none;
+    color: #802000;
+}
+
+h3, h4, h5, h6 {
+    font-family: verdana, arial, helvetica, Sans-Serif;
+}
+
+
+div.header p.status { text-align: right; }
+div.header p.last-modified { text-align: left; }
+
+dt {
+    font-weight: bold;
+    margin-top: 2ex;
+    margin-left: 1em;
+}
+
+address {
+    color: gray;
+    background: #EEEEEE;
+    text-align: right;
+    font-family: Times, serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+pre {
+    border-right: #646464 1px solid;
+    padding-right: 0.5em;
+    border-top: #646464 1px solid;
+    padding-top: 0.5em;
+    border-left: #646464 1px solid;
+    padding-left: 0.5em;
+    border-bottom: #646464 1px solid;
+    padding-bottom: 0.5em;
+    white-space: pre;
+    background-color: #f6e6e6;
+    color: black;
+    margin-left: 1em;
+    width: 90%;
+    display: table;
+    font-size: 120%;
+}
+
+.sidemenu {
+  font-size: x-small;
+  color: #ffffff;
+  padding-left: 1em;
+}
+
+.sidecolumn {
+  background-color: #a65050;
+  color:            #ffeeee;
+}
+
+
+
+.error {
+    font-weight: bold;
+    font-size:   large;
+    color: #ff4040;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0%;
+}
+
+.errorlistentry {
+    font-weight: bold;
+    font-size:   large;
+    color: #ff4040;
+}
+
+.errorlistentry {
+}
+
+.note {
+    font-weight: bold;
+    font-size:   large;
+    color: #204f20;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0%;
+}
+
+.grouphdr {
+    font-weight: bold;
+    color: #204f20;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0%;
+}
+
+.groupline {
+  font-size: small;
+}
+
+.spread {
+  padding-right: 1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+.formtag {
+   font-size: small;
+   padding-right: 1em;
+   text-align:    right;
+   vertical-align: top;
+}
+
+.formlefttag {
+   font-size: small;
+   padding-right: 1em;
+   vertical-align: top;
+}
+
+.formhead {
+    font-family:  Times, Times Roman, Serif;
+    font-variant: small-caps;
+    font-size:    x-large;
+    font-weight:  bold;
+    color: #eeddff;
+    background: #663399;
+}
+
+.formval {
+   font-weight: bold;
+   vertical-align: top;
+}
+
+.formexplain {
+   font-size: x-small;
+   line-height: 120%;
+}
+
+
+.required {
+   font-size: x-small;
+   color:     #ff4040;
+}
+
+
+.totalline {
+   font-weight: bold;
+}
+
+.totalcell {
+   text-align:  right;
+   border-top:  solid;
+   border-bottom: solid;
+}
+
+.underline {
+   border-bottom: solid;
+}
+
+
+.portaltitle {
+    font-family: Times, Times Roman, Serif;
+    font-variant: small-caps;
+    font-size:    large;
+    color: #Fff8f8;
+    background: #dF6060;
+    background: #663399;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+}
+
+.portalnewstitlerow {
+    font-family: Times, Times Roman, Serif;
+    font-variant: small-caps;
+    font-size:    large;
+    color: #Fff8f8;
+    background: #dF6060;
+    background: #663399;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.portalnewstitlecell {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+}
+
+.portalnewstitleoptions {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right:  1em;
+    text-align: right;
+    font-size:  x-small;
+}
+
+.fred { 
+	color: #ffffff; 
+	background-color: #df8080;
+}
+
+.portaltitlelink:link {
+ color: #fffcfc;
+}
+
+.portaltitlelink:visited {
+ color: #fffcfc;
+}
+
+.portaltitlelink:hover {
+ color: white;
+ background: #a04040;
+}
+
+
+
+.portalaction {
+    padding-right: .5em;
+    padding-left:  .5em;
+    font-size: x-small;
+    border-style:    outset;
+}
+
+.portalmsg {
+   font-size: x-small;
+   color:     #ff3030;
+   line-height: 100%;
+}
+
+.portalmsglist {
+   font-size: x-small;
+   color:     #ff3030;
+   line-height: 200%;
+}
+
+.portalmsghdr {
+   font-size: x-small;
+   font-weight: bold;
+   color:     #ff3030;
+}
+
+.portalmemname {
+   font-weight: bold;
+   color:     #106010;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.portalmemname:link {
+   font-weight: bold;
+   color:     #101060;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.portalmemname:visited {
+   font-weight: bold;
+   color:     #101060;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.portalmenubox {
+   border: thin outset #cc3030;
+   padding-left: 0em;
+}
+
+.portalsublist {
+   color: #002000;
+   padding-left: 0em;
+}
+
+.yourmenu {
+  display: list-item;
+   font-size: small;
+   color:     #ff3030;
+   line-height: 110%;
+   list-style-position: outer;
+   margin-bottom: 0.5em;
+}
+
+
+.portalordertable {
+  font-size: small;
+}
+
+.portalordercell {
+  padding-left: 1em;
+  font-size: small;
+}
+
+.portalorderstatus {
+  font-size: x-small;
+  color:  #ff3030;
+  padding-left: 2em;
+}
+
+.portalteamstable {
+  font-size: small;
+}
+
+.historyline {
+  font-size: x-small;
+}
+
+.historynotes {
+  font-size: small;
+}
+
+.adminmenuhead {
+  font-size: small;
+  font-variant: small-caps;
+}
+
+.palebackground {
+  background: #d0b0b0;
+}
+
+.lesspalebackground {
+  background: #f0d0d0;
+}
+
+.wideshort {
+  color: green;
+  background: #aabbcc;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top:  0em;
+  padding-bottom: 0em;
+}
+
+.newsright {
+  font-size:  x-small;
+  text-align: right;
+}
+
+.newsstory {
+  font-size: small;
+  text-align: justify;
+}
+
+.dilink {
+  font-size: small;
+}
+
+.downloadlabel {
+  font-size: small;
+  color:  #500000;
+}
+
+.downloadref:link {
+  font-size: small;
+  color:  #500000;
+  background: #f0f0c0;
+}
+
+.downloadref:visited {
+  font-size: small;
+  color:  #a00000;
+  background: #f0f0c0;
+}
+
+.downloadref:hover {
+  font-size: large;
+  background:  #a00000;
+  color: #f0f0c0;
+}
+
+
+.debuginfo {
+  font-size: x-small;
+  color:  #808080;
+}
+
+.pctitle {
+  font-size: small;
+  font-weight: bold;
+  padding-right: 1em;
+}
+
+.pcchange {
+  font-size: small;
+  padding-right: 1em;
+}
+
+
+.simpletableheader {
+  font-variant: small-caps;
+  font-weight:  bold;
+  background:    #993333;
+  color:        #ffe0e0;
+}
+
+.small {
+  font-size: small;
+}
+
+.hint {
+  font-size: small;
+   font-style: italic;
+   color:      #50a050;
+}
+
+.replab {
+   font-size: small;
+   font-style: italic;
+   color:      #50a050;
+   text-align:    right;
+   vertical-align: top;
+}  

@@ -1,0 +1,1 @@
+COPY "marita_people" FROM '/tc/work/dion/Data/MEMBERS.import' USING DELIMITERS '~';

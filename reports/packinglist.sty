@@ -1,0 +1,73 @@
+%
+%Produce pacing lists
+%
+%       \documentclass{article}
+%       \usepackage{packinglist}
+%       \begin{document}
+%       \begin{packinglist}{date}
+%       \lb{Dave Thomas}{%
+%       2225 Shumard Ln\\
+%       Flower Mound, TX 75028\\
+%       U.S.A.}{1234}
+%       \begin{litemlist}
+%       \litem{1}{Membership Package 2002/3}{10-Jun_02}
+%       \litem{2}{Global Finals Videos}{12-Jun_02}
+%       \litem{1}{Gold-plated Wombats}{18-Jun_02}
+%       \end{litemlist}
+%       \end{packinglist}
+%       \end{document}
+
+\usepackage{times}
+\usepackage{array}
+\usepackage{fancyheadings}
+
+\setlength{\voffset}{-.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{28pt}
+\setlength{\headheight}{1in}
+\setlength{\textwidth}{6in}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\textheight}{7.75in}
+\setlength{\footskip}{0pt}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+\lhead{\LARGE Packing Information}
+
+\def\mghrulefill#1{\leavevmode\leaders\hrule\@height #1\hfill\kern\z@}
+
+\newenvironment{packinglist}[1]{%
+\newpage\lfoot{Printed: #1}%
+\mbox{}\vspace{1in}%
+}{\vfill\mbox{}}
+
+\newcommand{\lb}[3]{
+To: \mbox{
+  \begin{minipage}[t]{3in}
+    \begin{flushleft}
+      \textbf{#1}\\
+      {\sf #2}\par
+     \end{flushleft}
+   \end{minipage}
+}
+
+}
+
+\newenvironment{litemlist}{%
+\setlength{\extrarowheight}{1em}
+\begin{tabular}{c p{4in} l}
+\tabhead
+\\
+}{%
+\end{tabular}
+}
+
+\newcommand{\tabhead}{\hline
+Qty. & Description & Ordered\\[1em] \hline
+}
+
+\newcommand{\litem}[3]{ #1 & #2 & #3\\}
+
+% LocalWords:  Shumard packinglist
+% LocalWords:  litemlist

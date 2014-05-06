@@ -1,0 +1,118 @@
+%
+% Simple style file for producing invoices
+%
+
+% \ToFrom{address with \\s}{address...}
+% \YourPO{their PO number}
+% \OurRef{our reference}
+% \Date{date}
+% \For{Service}{Amount}
+% \Total{Amount}
+% \InvComment{Invoice comments with \\s}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{color}
+
+\setlength{\voffset}{-1in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0pt}
+\setlength{\textwidth}{7in}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\textheight}{10in}
+\setlength{\footskip}{0pt}
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\BaseDir}[1]{\gdef\BASEDIR{#1}}
+\newcommand{\To}[1]{\gdef\TO{#1}}
+\newcommand{\From}[1]{\gdef\FROM{#1}}
+\newcommand{\Contact}[1]{\gdef\CONTACT{#1}}
+\newcommand{\Org}[1]{\gdef\ORG{#1}}
+\newcommand{\Telephone}[1]{\gdef\TELEPHONE{#1}}
+\newcommand{\YourPO}[1]{\gdef\PO{#1}}
+\newcommand{\OurRef}[1]{\gdef\REF{#1}}
+\newcommand{\Date}[1]{\gdef\DATE{#1}}
+\newcommand{\Total}[1]{\gdef\TOTAL{#1}}
+\newcommand{\InvComment}[1]{\gdef\COMMENT{#1}}
+\newcommand{\InvId}[1]{\gdef\ID{#1}}
+\newcommand{\IsInvoice}{%
+  \gdef\DOCNAME{Invoice}%
+  \gdef\TERMS{\\Terms:\makebox[.95in]{\mbox{}\hfill 30 Days}}%
+  \gdef\BILLTO{Bill To:}%
+  \gdef\IDOC{P.O.}%
+  \gdef\FOOTNOTE{Make all checks payable (in U.S. funds) to: Destination Imagination, Inc.\\
+   Return copy of invoice with payment.\\}
+  \gdef\PAID{}
+}
+\newcommand{\note}[1]{%
+  \textbf{\color[rgb]{0.0,0.0,1.0}#1}}
+
+\newcommand{\IsReceipt}{%
+  \gdef\DOCNAME{Receipt}%
+  \gdef\TERMS{}%
+  \gdef\BILLTO{Mail To:}%
+  \gdef\IDOC{Check}%
+  \gdef\FOOTNOTE{}%
+  \gdef\PAID{{\color[rgb]{0.8,1.0,0.8}
+       \sffamily
+       \fontsize{72}{72}%
+       \selectfont
+       \vskip 46pt\begin{center}RECEIPT\end{center}\vskip -118pt}}%
+}
+
+\newcommand{\DIINV}{%
+  \newpage\sffamily
+  \parbox[t]{1in}{\vskip .1in\includegraphics*{\BASEDIR /ballandbox.jpg}\vskip -.1in}%
+  \parbox[t]{3in}{%
+    {\Large Destination ImagiNation, Inc.}\\
+    \textbf{\textsl{\small The most important course in education.}}\\
+    P.O. Box 547\\
+    Glassboro, NJ 08028-0547\\
+    Ph. (856) 881--1603  Fax (856) 881--3596\\
+    {\small http://www.destinationimagination.org}\\[2ex]
+    FED TAX ID \#  22-2415554}%
+  \hfill
+  \parbox[t]{2.5in}{\raggedleft
+       {\Huge \DOCNAME}\\[3ex]
+       \IDOC\ Number:\makebox[.95in]{\mbox{}\hfill \PO}\\
+       \DOCNAME\ Date:\makebox[.95in]{\mbox{}\hfill \DATE}\\
+       \DOCNAME\ No.\makebox[.95in]{\mbox{}\hfill \ID}\\
+       Tracking No.\makebox[.95in]{\mbox{}\hfill \REF}\TERMS\\
+  }
+
+  \vspace{.3in}\par
+
+  \textbf{\BILLTO}\quad\parbox[t]{4in}{\TO}
+
+  \vspace{.5in}\par
+
+  \newbox\dl
+  \setbox\dl=\hbox to 1pt{\rule[4pt]{1pt}{3pt}\\
+                          \rule[0pt]{1pt}{.5pt}}%
+
+  \mbox{}\leaders\copy\dl\hfill\mbox{}
+
+  \vskip .3in
+
+  \setlength{\tabcolsep}{5 pt}%
+  \renewcommand{\arraystretch}{1.3}%
+  \PAID
+}
+\newcommand{\ENDINV}{%
+  \vbox to 1in {%
+    Notes: \parbox[t]{3in}{\COMMENT}
+  }
+
+  {\small \FOOTNOTE
+   If you have any questions concerning this
+   \DOCNAME, call (856) 881--1603\vspace{.3in}\par}
+
+  {\centering\textbf{\textsc{Thank You!}}\par}
+    
+}
+
+% LocalWords:  ImagiNation TXCPSO MyFigure ballandbox Glassboro ImaginNation
+% LocalWords:  assport nvoice ugust Shumard dddddd DIINV erms

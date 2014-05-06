@@ -1,0 +1,21 @@
+h2 {
+    font-family: Times, Times Roman, Serif;
+    font-variant: small-caps;
+    color: white;
+    background: red;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 2%;
+    border-style: double;
+    border-color: white;
+}
+
+
+body {
+    color: black;
+    background: #ffe8e8;
+    margin-left: .5in;
+    margin-right: .5in;
+    font-family: verdana, arial, helvetica, Sans-Serif;
+}
+

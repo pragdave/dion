@@ -1,0 +1,1 @@
+delete from session where  age(now(), session_touched) > interval'12 hour';

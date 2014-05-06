@@ -1,0 +1,110 @@
+%
+%Produce multipage affiliate statements
+%
+
+% \AffName{name}
+% \CycleDate{date}
+% \PrintDate{date}
+% \begin{fees}
+%   \begin{product}{qty}{product name}{total}
+%   \line{data}{desc}{unit price}
+%        :          :
+%   \end{product}
+%     .      .
+% \end{fees}
+% \begin{refunds}
+%    .       .
+% \end
+% \total{amt}
+
+\usepackage{pstricks}
+\usepackage{times}
+\usepackage{array}
+\usepackage{fancyheadings}
+
+\setlength{\voffset}{-.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{28pt}
+\setlength{\headheight}{1in}
+\setlength{\textwidth}{6in}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\textheight}{7.75in}
+\setlength{\footskip}{0pt}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+\newcommand{\AffName}[1]{\newpage\pagenumbering{arabic}\gdef\AFFNAME{#1}}
+\newcommand{\CycleDate}[1]{\gdef\CYCLEDATE{#1}}
+\newcommand{\PrintDate}[1]{\gdef\PRINTDATE{#1}}
+
+\lhead{Affiliate Fee Reconciliation:\\ \Large \AFFNAME}
+
+\lfoot{Printed: \PRINTDATE}
+\rfoot{Cycle ended: \CYCLEDATE}
+
+\def\need@#1{\par \penalty-100 \begingroup % preserve \dimen@
+  \dimen@\pagegoal \advance\dimen@-\pagetotal % space left
+  \ifdim #1>\dimen@ % not enough space left
+     \ifdim\dimen@>\z@ \vfil\fi % only do \vfil if some space left on page
+     \eject 
+  \fi \endgroup}
+
+\def\NEED{\need@}
+
+\newenvironment{fees}{
+
+  \NEED{1in}%
+  {\Large\textbf{Fees Earned}}\\
+}{\vspace{.5in}\par}
+
+\newenvironment{refunds}{
+
+  \NEED{1in}%
+  {\Large\textbf{Refunds}}\\
+}{}
+
+
+%   \begin{product}{qty}{product name}{total}
+\newenvironment{product}[3]{
+
+\makebox[.5in][r]{#1 $\times$ }%
+\parbox[t]{4.7in}{\textbf{#2}\dotfill}%
+\hfill\textbf{\$#3}
+
+}{}
+
+\newcommand{\litem}[3]{%
+
+\makebox[.5in]{\mbox{}}%
+\makebox[.8in][l]{#1}%
+\makebox[3.2in][l]{#2}%
+\makebox[.7in][r]{\$#3}
+
+}
+
+\newcommand{\none}{\mbox{}\hskip 0.5in\emph{None}
+}
+
+
+\newcommand{\total}[1]{
+
+\NEED{1in}
+\vfill
+\begin{tabular}{|| r r ||}
+ \hline
+ \hline
+ & \\
+ \textbf{Total fee to Affiliate:} & \textbf{\$#1} \\[1em]
+ Check number: & \rule{1in}{1pt} \\[1em]
+ Date sent: & \rule{1in}{1pt} \\[1em]
+ & \\
+ \hline
+\hline
+\end{tabular}
+\vspace{.2in}\mbox{}
+}
+
+
+
+% LocalWords:  ImagiNation TXCPSO multipage desc

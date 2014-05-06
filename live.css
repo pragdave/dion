@@ -1,0 +1,22 @@
+body {
+    background-image: url(/images/whtbk.gif);
+    color: black;
+    margin-left: .5in;
+    margin-right: .5in;
+    font-family: verdana, arial, helvetica, Sans-Serif;
+}
+
+
+h2 {
+    font-family: Times, Times Roman, Serif;
+    font-variant: small-caps;
+    color: #Fff8f8;
+    background: #dF6060;
+    background: #aF30af;
+    background: #663399;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 2%;
+    border-style: double;
+    border-color: white;
+}

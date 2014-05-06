@@ -1,0 +1,24 @@
+2003-09-11  Dave Thomas  <Dave@Thomases.com>
+
+	* bo/Region.rb: Allow ADs to unassign things when deleting a region.
+
+	* app/Shipping.rb: Sort shipping summary report by ship address
+
+	* app/MaintainRegions.rb: Enforce region > 0, not >= 0, when
+	reassigning.
+
+2003-08-28  Dave Thomas  <Dave@Thomases.com>
+
+	* bo/Role.rb: Now tidy up teams when deleting the roles for a
+	TeamPak.
+	
+
+2003-06-24  Dave Thomas  <Dave@Thomases.com>
+
+	* app/DailyPlanet.rb: Finally fix bug where ADs could post global
+	news (turned out it was enabled after a delete)
+
+	* dion.rb: Start logging changes for 2003/4. This log does not
+	include the changes made for DI Later and the new Rising Stars
+	rules.
+
